@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Job Submitted</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #FA2A55;
+        }
+        h2 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #555;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: #FA2A55;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #e0284b;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+        .back-link {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #2196F3;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background-color: #1976D2;
+        }
+        .logo {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Logo -->
+        <img src="{{ url_for('static', filename='logo.jpg') }}" alt="Logo" class="logo">
+
+        <h1>Print Job Submitted</h1>
+        <p class="message">
+            Your file <strong>{{ filename }}</strong> has been successfully uploaded with 
+            <strong>{{ total_pages if total_pages is not none else 'N/A' }}</strong> pages. 
+            Please wait for your printing preference on the screen.
+        </p>
+      
+
+        <p><a class="back-link" href="/">Go back to the home page</a></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+pillow
+python-socketio
+mysql-connector-python
+websocket-client
+PyMuPDF
+python-docx
+PyPDF2 
+firebase-admin 
